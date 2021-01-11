@@ -15,7 +15,6 @@ namespace SEOchecklistKyiv.Methods
             for (int i = 0; i < All_Pages.siteAllLinks.Count; i++)
             {
                 Page_StatusCode.GetResponse(All_Pages.siteAllLinks[i].ToString());  
-                //test
             }
         }
     }
