@@ -9,6 +9,7 @@ namespace SEOchecklistKyiv.API
 {
     public class PageStatusCode:Base
     {
+       
         public void GetResponse(string link)
         {
             RestClient client = new RestClient(link);

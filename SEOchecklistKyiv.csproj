@@ -58,14 +58,20 @@
   <ItemGroup>
     <Compile Include="API\PageStatusCode.cs" />
     <Compile Include="Base.cs" />
-    <Compile Include="Methods\AllPages.cs" />
-    <Compile Include="Methods\SiteAllLinks.cs" />
+    <Compile Include="Locators\Selectors.cs" />
+    <Compile Include="Methods\AllLinks.cs" />
+    <Compile Include="Methods\CanonicalHelper.cs" />
+    <Compile Include="Methods\HelperH1.cs" />
+    <Compile Include="Methods\HelperTitle.cs" />
+    <Compile Include="Methods\All200Links.cs" />
+    <Compile Include="Methods\IframeHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Canonical.cs" />
+    <Compile Include="Tests\H1.cs" />
+    <Compile Include="Tests\Iframe.cs" />
+    <Compile Include="Tests\Title.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Locators\" />
-    <Folder Include="Tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
