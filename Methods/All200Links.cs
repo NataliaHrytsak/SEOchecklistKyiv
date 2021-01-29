@@ -6,9 +6,9 @@ using System.Collections.Generic;
 
 namespace SEOchecklistKyiv.Methods
 {
-    public class SiteAllLinks:Base
+    public class All200Links:Base
     {      
-        [Test]
+    
         public void GetAll200()
         {          
             All_Pages.GetAllLinks();
