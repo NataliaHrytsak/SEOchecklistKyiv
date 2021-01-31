@@ -8,7 +8,7 @@ namespace SEOchecklistKyiv.Methods
 {
     public class All200Links:Base
     {      
-    
+    [Test]
         public void GetAll200()
         {          
             All_Pages.GetAllLinks();
