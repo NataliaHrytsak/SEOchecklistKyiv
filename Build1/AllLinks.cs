@@ -1,13 +1,12 @@
 ﻿using OpenQA.Selenium;
-using System;
 using System.Collections.Generic;
-using System.IO;
+
 
 namespace SEOchecklistKyiv.Methods
 {
-    public class AllPages : Base
+    public class AllLinks : Base
     {    
-        public AllPages(IWebDriver driver)
+        public AllLinks(IWebDriver driver)
         {
             this.driver = driver;
         }
@@ -30,8 +29,7 @@ namespace SEOchecklistKyiv.Methods
                 var findPagesLinks = driver.FindElements(By.PartialLinkText("https://"));
                 foreach (IWebElement element in findPagesLinks)
                 {
-                    string pageLink = element.GetAttribute("href").ToString();
-                  
+                    string pageLink = element.GetAttribute("href").ToString();              
                     siteAllLinks.Add(pageLink);                  
                 }
             }         

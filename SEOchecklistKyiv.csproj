@@ -56,18 +56,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\PageStatusCode.cs" />
+    <Compile Include="Build1\PageStatusCode.cs" />
     <Compile Include="Base.cs" />
-    <Compile Include="Methods\AllPages.cs" />
-    <Compile Include="Methods\SiteAllLinks.cs" />
+    <Compile Include="Locators\Selectors.cs" />
+    <Compile Include="Build1\AllLinks.cs" />
+    <Compile Include="Methods\CanonicalHelper.cs" />
+    <Compile Include="Methods\HelperH1.cs" />
+    <Compile Include="Methods\HelperTitle.cs" />
+    <Compile Include="Build1\All200Links.cs" />
+    <Compile Include="Methods\IframeHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Canonical.cs" />
+    <Compile Include="Tests\H1.cs" />
+    <Compile Include="Tests\Iframe.cs" />
+    <Compile Include="Tests\Title.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Locators\" />
-    <Folder Include="Tests\" />
+    <Folder Include="API\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Build1\All200links.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
