@@ -25,16 +25,14 @@ namespace SEOchecklistKyiv.API
                 if (response.StatusCode.Equals(HttpStatusCode.MovedPermanently) || response.StatusCode.Equals(HttpStatusCode.Found) || response.StatusCode.Equals(HttpStatusCode.TemporaryRedirect))
                 {
                     string redirectlink = response.Headers.Where(x => x.Name == "Location").Select(y => y.Value).FirstOrDefault().ToString();
-                    //File.AppendAllText(@"C:\Users\dev\Desktop\No200Links.txt", link + (int)response.StatusCode + " to " + redirectlink + Environment.NewLine);
-                    Assert.That((int)response.StatusCode, Is.EqualTo(200));
+                    File.AppendAllText(@"C:\Users\dev\source\repos\SEOchecklistKyiv\Build1\All3xxLinks.txt", link + "  " + (int)response.StatusCode + " to " + redirectlink + Environment.NewLine);
                 }
             }
-            finally
+            finally 
             {
                 if ((response.StatusCode != HttpStatusCode.OK) && (response.StatusCode != HttpStatusCode.MovedPermanently) && (response.StatusCode != HttpStatusCode.Found) && (response.StatusCode != HttpStatusCode.TemporaryRedirect))
                 {
-                    //File.AppendAllText(@"C:\Users\dev\Desktop\No200Links.txt", link + (int)response.StatusCode + Environment.NewLine);
-                    Assert.That((int)response.StatusCode, Is.EqualTo(200));
+                    File.AppendAllText(@"C:\Users\dev\source\repos\SEOchecklistKyiv\Build1\All4xxAnd5xxLinks.txt", link + "  " + (int)response.StatusCode + Environment.NewLine);
                 }
             }
         }

@@ -13,7 +13,7 @@ namespace SEOchecklistKyiv.Methods
         public List<string> siteAllLinks = new List<string>();
         public void GetAllLinks()
         {
-            string site = "https://tradeallcrypto.org/";
+            string site = "https://www.gwglobalfx.com/";
             string mainSitemap = site + "/sitemap_index.xml";
             driver.Navigate().GoToUrl(mainSitemap);
             var secondarySitemaps = driver.FindElements(By.PartialLinkText("https://"));

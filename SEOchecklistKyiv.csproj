@@ -79,6 +79,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Build1\All200links.txt" />
+    <Content Include="Build1\All3xxLinks.txt" />
+    <Content Include="Build1\All4xxAnd5xxLinks.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
