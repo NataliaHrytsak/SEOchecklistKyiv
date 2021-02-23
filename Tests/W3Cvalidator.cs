@@ -2,17 +2,17 @@
 
 namespace SEOchecklistKyiv.Tests
 {
-    public class H1 : Base
+   public class W3Cvalidator:Base
     {
         [Test]
-        public void GetH1()
+        public void W3C()
         {
             All_Pages.GetAllLinks();
             for (int i = 0; i < All_Pages.siteAllLinks.Count; i++)
             {
                 try
                 {
-                    Helper_H1.CheckH1(All_Pages.siteAllLinks[i].ToString());
+                    W3C_hel_per.Validate(All_Pages.siteAllLinks[i].ToString());
                 }
                 catch
                 {

@@ -10,7 +10,14 @@ namespace SEOchecklistKyiv.Tests
             All_Pages.GetAllLinks();
             for (int i = 0; i < All_Pages.siteAllLinks.Count; i++)
             {
-                Helper_Title.CheckTitles(All_Pages.siteAllLinks[i].ToString());
+                try
+                {
+                    Helper_Title.CheckTitles(All_Pages.siteAllLinks[i].ToString());
+                }
+                catch
+                {
+                    continue;
+                }
             }
         }
     }

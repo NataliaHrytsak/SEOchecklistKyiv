@@ -1,23 +1,30 @@
 ﻿using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SEOchecklistKyiv.Tests
 {
-    public class H1 : Base
+    public class httpRedirect:Base
     {
         [Test]
-        public void GetH1()
+        public void GetAll301()
         {
             All_Pages.GetAllLinks();
             for (int i = 0; i < All_Pages.siteAllLinks.Count; i++)
             {
                 try
                 {
-                    Helper_H1.CheckH1(All_Pages.siteAllLinks[i].ToString());
+                    http_URLs.GetURL(All_Pages.siteAllLinks[i].ToString());
+                    Get_StatusCode301.GetStatus(http_URLs.AllhttpURLs[i].ToString(), All_Pages.siteAllLinks[i].ToString());
                 }
                 catch
                 {
                     continue;
                 }
+
             }
         }
     }

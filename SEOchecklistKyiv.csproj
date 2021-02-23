@@ -61,15 +61,29 @@
     <Compile Include="Locators\Selectors.cs" />
     <Compile Include="Build1\AllLinks.cs" />
     <Compile Include="Methods\CanonicalHelper.cs" />
+    <Compile Include="Methods\Class1.cs" />
+    <Compile Include="Methods\GetStatusCode301.cs" />
     <Compile Include="Methods\HelperH1.cs" />
     <Compile Include="Methods\HelperTitle.cs" />
     <Compile Include="Build1\All200Links.cs" />
+    <Compile Include="Methods\httpURLs.cs" />
+    <Compile Include="Methods\http_wwwURLs.cs" />
     <Compile Include="Methods\IframeHelper.cs" />
+    <Compile Include="Methods\https_wwwURLs.cs" />
+    <Compile Include="Methods\MixedContentHelper.cs" />
+    <Compile Include="Methods\SlashHelper.cs" />
+    <Compile Include="Methods\W3C_helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Canonical.cs" />
     <Compile Include="Tests\H1.cs" />
+    <Compile Include="Tests\httpRedirect.cs" />
+    <Compile Include="Tests\http_wwwRedirect.cs" />
     <Compile Include="Tests\Iframe.cs" />
+    <Compile Include="Tests\MixedContent.cs" />
     <Compile Include="Tests\Title.cs" />
+    <Compile Include="Tests\https_wwwRedirect.cs" />
+    <Compile Include="Tests\TrailingSlash.cs" />
+    <Compile Include="Tests\W3Cvalidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="API\" />

@@ -1,18 +1,23 @@
 ﻿using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SEOchecklistKyiv.Tests
 {
-    public class H1 : Base
+   public class MixedContent:Base
     {
         [Test]
-        public void GetH1()
+        public void CheckUrls()
         {
             All_Pages.GetAllLinks();
             for (int i = 0; i < All_Pages.siteAllLinks.Count; i++)
             {
                 try
                 {
-                    Helper_H1.CheckH1(All_Pages.siteAllLinks[i].ToString());
+                    mixed_ContentHelper.CheckProtocol(All_Pages.siteAllLinks[i].ToString());
                 }
                 catch
                 {

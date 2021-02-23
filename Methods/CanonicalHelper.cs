@@ -14,7 +14,7 @@ namespace SEOchecklistKyiv.Methods
         public void CheckCanonical(string link)
         {
             driver.Url = link;
-            IReadOnlyCollection<IWebElement> selectCanonical = driver.FindElements(By.TagName("canonical"));
+            IReadOnlyCollection<IWebElement> selectCanonical = driver.FindElements(By.CssSelector("link[rel='canonical']"));
             bool present;
             {
                 if (selectCanonical.Count > 0)

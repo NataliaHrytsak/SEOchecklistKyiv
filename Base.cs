@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using SEOchecklistKyiv.API;
 using SEOchecklistKyiv.Methods;
+using SEOchecklistKyiv.Tests;
 using System.Collections.Generic;
 
 namespace SEOchecklistKyiv
@@ -16,6 +17,13 @@ namespace SEOchecklistKyiv
         public HelperH1 Helper_H1;
         public CanonicalHelper Canonical_Helper;
         public IframeHelper Iframe_Helper;
+        public https_wwwURLs https_www_URLs;
+        public GetStatusCode301 Get_StatusCode301;
+        public httpURLs http_URLs;
+        public http_wwwURLs http_www_URLs;
+        public SlashHelper slash_helper;
+        public MixedContentHelper mixed_ContentHelper;
+        public W3C_helper W3C_hel_per;
 
         [OneTimeSetUp]
         public void OnTestStarted()
@@ -27,7 +35,13 @@ namespace SEOchecklistKyiv
             Helper_Title = new HelperTitle(driver);
             Helper_H1 = new HelperH1(driver);
             Canonical_Helper = new CanonicalHelper(driver);
-          //  Iframe_Helper = new IframeHelper(driver);
+            https_www_URLs = new https_wwwURLs();
+            Get_StatusCode301 = new GetStatusCode301();
+            http_URLs = new httpURLs();
+            http_www_URLs = new http_wwwURLs();
+            slash_helper = new SlashHelper();
+            mixed_ContentHelper = new MixedContentHelper(driver);
+            W3C_hel_per = new W3C_helper();
         }
 
         [OneTimeTearDown]
